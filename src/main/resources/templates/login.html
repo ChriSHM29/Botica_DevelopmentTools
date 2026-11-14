@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión | Botica Salud Ica</title>
+</head>
+<body>
+    <h1>Botica Salud Ica</h1>
+    <h2>Inicio de sesión</h2>
+
+    <p th:if="${error}" th:text="${error}" role="alert"></p>
+
+    <form th:action="@{/login}" method="post">
+        <p>
+            <label for="usuario">Usuario</label>
+            <input id="usuario" name="usuario" type="text" required>
+        </p>
+        <p>
+            <label for="clave">Clave</label>
+            <input id="clave" name="clave" type="password" required>
+        </p>
+        <button type="submit">Ingresar</button>
+    </form>
+</body>
+</html>
